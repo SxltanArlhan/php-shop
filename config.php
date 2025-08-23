@@ -7,24 +7,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
     <title>config</title>
     <style>
-        .floating-btn {
-                position: fixed;
-                bottom: 20px;
-                left: 20px;
-                background-color: black;
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 50px;
-                cursor: pointer;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-                z-index: 999;
-                transition: background-color 0.3s;
-            }
-
-            .floating-btn:hover {
-                background-color: #333;
-            }
     </style>
 </head>
 <body>
@@ -72,8 +54,5 @@
 
 
 ?>
-    <div class="mt-4">
-        <a href="index.php"><button class="floating-btn">Back</button></a>
-    </div>
 </body>
 </html>
