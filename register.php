@@ -16,8 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error[] = "กรุณากรอกอีเมลให้ถูกต้อง";
     } elseif ($password !== $cpassword) {
         $error[] = "รหัสผ่านไม่ตรงกัน";
-    } elseif (strlen($password) < 8) {
-        $error[] = "รหัสผ่านควรมีอย่างน้อย 8 ตัวอักษร";
+    } elseif (strlen($password) < 6) {
+        $error[] = "รหัสผ่านควรมีอย่างน้อย 6 ตัวอักษร";
     }
 
     if (empty($error)) {
@@ -30,8 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $error[] = "ชื่อผู้ใช้หรืออีเมลนี้ถูกใช้แล้ว";
             } else {
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-                $sql  = "INSERT INTO users (username, full_name, email, password, role) 
-                        VALUES (?, ?, ?, ?, 'member')";
+                $sql  = "INSERT INTO users (username, full_name, email, password, role) VALUES (?, ?, ?, ?, 'member')";
                 $stmt = $conn->prepare($sql);
                 $stmt->execute([$username, $fname, $email, $hashedPassword]);
 

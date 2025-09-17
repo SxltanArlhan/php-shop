@@ -1,5 +1,4 @@
 <?php
-session_start(); // เริ่ม session
 require_once '../config.php'; // เชื่อมต่อฐานข้อมูล
 require_once 'auth_admin.php';
 ?>
@@ -131,7 +130,7 @@ require_once 'auth_admin.php';
 
   .btn-primary {
     background: linear-gradient(163deg, #6a5cff, #3f32ff);
-    color: #ffffff;
+    color: #0b140d;
   }
 
   .btn-success {
@@ -141,7 +140,7 @@ require_once 'auth_admin.php';
 
   .btn-warning {
     background: linear-gradient(163deg, #ffd54f, #ffb300);
-    color: #140a00;
+    color: #0b140d;
   }
 
   .btn-dark {
@@ -201,7 +200,7 @@ require_once 'auth_admin.php';
 <a href="users.php" class="btn btn-warning w-100">จัดการสมาชิก</a>
 </div>
 <div class="col-md-4 mb-3">
-<a href="categories.php" class="btn btn-dark w-100">จัดการหมวดหมู่</a>
+<a href="category.php" class="btn btn-dark w-100">จัดการหมวดหมู่</a>
 </div>
 </div>
 <a href="../logout.php" class="btn btn-secondary mt-3">ออกจากระบบ</a>
